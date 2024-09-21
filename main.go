@@ -61,4 +61,8 @@ func main() {
 	coffeeWithCaramel := &Caramel{coffee: coffee}
 	fmt.Println("Coffee with Caramel:", coffeeWithCaramel.Description(), "- Cost:", coffeeWithCaramel.Cost())
 
+	// combining multiple decorators
+	coffeeWithMilkAndCaramel := &Milk{coffee: &Caramel{coffee: coffee}}
+	fmt.Println("Coffee with Milk and Caramel", coffeeWithMilkAndCaramel.Description(), "- Cost:", coffeeWithMilkAndCaramel.Cost())
+
 }
