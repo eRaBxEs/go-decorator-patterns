@@ -55,6 +55,10 @@ func main() {
 	// Decorate it with Milk
 	coffeeWithMilk := &Milk{coffee: coffee}
 	// output
-	fmt.Println("Coffee with Milk:", coffeeWithMilk.Description(), "Cost:", coffeeWithMilk.Cost())
+	fmt.Println("Coffee with Milk:", coffeeWithMilk.Description(), "- Cost:", coffeeWithMilk.Cost())
+
+	// Decorate it with Caramel
+	coffeeWithCaramel := &Caramel{coffee: coffee}
+	fmt.Println("Coffee with Caramel:", coffeeWithCaramel.Description(), "- Cost:", coffeeWithCaramel.Cost())
 
 }
