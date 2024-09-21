@@ -63,6 +63,10 @@ func main() {
 
 	// combining multiple decorators
 	coffeeWithMilkAndCaramel := &Milk{coffee: &Caramel{coffee: coffee}}
-	fmt.Println("Coffee with Milk and Caramel", coffeeWithMilkAndCaramel.Description(), "- Cost:", coffeeWithMilkAndCaramel.Cost())
+	fmt.Println("Coffee with Milk and Caramel:", coffeeWithMilkAndCaramel.Description(), "- Cost:", coffeeWithMilkAndCaramel.Cost())
+
+	// another multiple decorator combination, just to see if caramel comes before milk string wise
+	coffeeWIthCaramelAndMilk := &Caramel{coffee: &Milk{coffee: coffee}}
+	fmt.Println("Coffee with Milk and Caramel:", coffeeWIthCaramelAndMilk.Description(), "- Cost:", coffeeWIthCaramelAndMilk.Cost())
 
 }
